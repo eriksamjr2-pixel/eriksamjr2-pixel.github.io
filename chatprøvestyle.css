@@ -1,0 +1,50 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff6a00,
+    #ee0979,
+    #00c3ff,
+    #00ffb8,
+    #f9d423,
+    #fc00ff,
+    #00dbde
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: rainbow 6s ease-in-out infinite;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
