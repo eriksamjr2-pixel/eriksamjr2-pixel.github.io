@@ -3,41 +3,41 @@ body {
   color: #666;
 }
 
-/* NAVBAR */
+/* NAVIGASJONSFELT */
 
-.custom-navbar {
+.navigasjonsfelt {
   background-color: #d8d8d8;
   border-bottom: 1px solid #bcbcbc;
 }
 
-.custom-link {
+.navigasjonslenke {
   color: #666;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.logo-text {
+.nettsidelogo {
   color: #666;
   letter-spacing: 4px;
   font-weight: bold;
 }
 
-.search-box {
+.søkefelt {
   width: 200px;
 }
 
-.menu-btn {
+.sidepanelknapp {
   font-size: 2rem;
   border: none;
 }
 
-.menu-btn:hover {
+.sidepanelknapp:hover {
   background: transparent;
 }
 
-/* PLACEHOLDERS */
+/* PRODUKTBILDER */
 
-.placeholder-box {
+.produktbilde {
   background-color: #d9d9d9;
   height: 250px;
 
@@ -51,20 +51,20 @@ body {
   margin-bottom: 20px;
 }
 
-.small-box {
+.eierbilde {
   height: 220px;
   font-size: 2rem;
 }
 
-/* HEADLINE */
+/* OVERSKRIFT */
 
-.headline {
+.hovedoverskrift {
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 3px;
 }
 
-/* SIDEBAR */
+/* SIDEPANEL */
 
 .auth-panel {
   position: fixed;
@@ -88,14 +88,15 @@ body {
   transform: translateX(0);
 }
 
-/* PRODUKT-RAD (forside) */
-.midcontainer {
+/* FREMHEVEDE PRODUKTER */
+
+.fremhevede_produkter {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.midrow {
+.produktrad {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -103,11 +104,13 @@ body {
   flex-wrap: wrap;
 }
 
-.midbox {
+.produktkort {
   flex: 1 1 calc(33.333% - 1rem);
   max-width: calc(33.333% - 1rem);
   box-sizing: border-box;
 }
+
+/* TOPPSEKSJON */
 
 .topcontainer {
   padding-top: 0.5rem;
@@ -120,25 +123,29 @@ body {
   align-items: center;
 }
 
-.bottomcontainer {
+/* INFORMASJONSSEKSJON */
+
+.informasjonsseksjon {
   margin-top: 2rem;
 }
 
-.bottomrow {
+.informasjonsrad {
   gap: 1rem;
 }
 
-.bottombox {
+.informasjonsbilde {
   border: 1px solid #c4c4c4;
 }
 
+/* MOBIL */
+
 @media (max-width: 768px) {
-  .midbox {
+  .produktkort {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .placeholder-box {
+  .produktbilde {
     height: 180px;
     font-size: 2rem;
   }
