@@ -88,15 +88,14 @@ body {
   transform: translateX(0);
 }
 
-/* FREMHEVEDE PRODUKTER */
-
-.fremhevede_produkter {
+/* PRODUKT-RAD (forside) */
+.midcontainer {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.produktrad {
+.midrow {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -104,48 +103,19 @@ body {
   flex-wrap: wrap;
 }
 
-.produktkort {
+.box1 {
   flex: 1 1 calc(33.333% - 1rem);
   max-width: calc(33.333% - 1rem);
   box-sizing: border-box;
 }
 
-/* TOPPSEKSJON */
-
-.topcontainer {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.toprow,
-.topcontrols {
-  display: flex;
-  align-items: center;
-}
-
-/* INFORMASJONSSEKSJON */
-
-.informasjonsseksjon {
-  margin-top: 2rem;
-}
-
-.informasjonsrad {
-  gap: 1rem;
-}
-
-.informasjonsbilde {
-  border: 1px solid #c4c4c4;
-}
-
-/* MOBIL */
-
 @media (max-width: 768px) {
-  .produktkort {
+  .box1 {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .produktbilde {
+  .placeholder-box {
     height: 180px;
     font-size: 2rem;
   }
