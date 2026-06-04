@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Innlogging med Supabase</title>
+    <title>Livetshardeskole.no</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,48 +13,96 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <nav
-      class="navbar navbar-expand-md navbar-dark bg-dark border-bottom"
-      aria-label="Hovednavigasjon"
-    >
-      <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand fw-semibold text-white" href="index.html"
-          >learn-it.no</a
-        >
-        <div>
-          <button id="authOpenBtn" class="btn btn-sm btn-outline-light">
-            Logg inn
-          </button>
-          <span id="authUserBadge" class="ms-2 small text-white-50"></span>
+    <!-- TOPBAR -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center gap-4">
+          <a class="nav-link custom-link" href="index.html">HJEM</a>
+          <a class="nav-link custom-link" href="kontakt.html">KONTAKT</a>
+          <a class="nav-link custom-link" href="butikk.html">PRODUKTER</a>
+        </div>
+
+        <h2 class="logo-text mb-0">LIVETSHARDESKOLE.NO</h2>
+
+        <div class="d-flex align-items-center gap-2">
+          <span class="custom-link">SØK</span>
+
+          <input class="form-control search-box" type="text" />
+
+          <button id="authOpenBtn" class="btn menu-btn">☰</button>
         </div>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="py-5 bg-light border-bottom">
-      <div class="container">
-        <h1 class="h3 fw-bold">Supabase + HTML + JS: enkel innlogging</h1>
-        <p class="text-muted mb-0">
-          Innlogging, registrering og roller (admin/student) uten rammeverk.
-        </p>
+    <!-- PRODUKTER PÅ FORSIDE -->
+
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="placeholder-box">BILDE</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="placeholder-box">BILDE</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="placeholder-box">BILDE</div>
+        </div>
       </div>
-    </header>
+    </div>
 
-    <main class="container py-4">
-      <h2 class="h5">Velkommen</h2>
-      <p class="text-muted">
-        Bruk knappen <em>Logg inn</em> oppe til høyre for å teste løsningen.
-      </p>
-    </main>
+    <!-- OVERSKRIFT -->
 
-    <!-- INNLOGGINGSPANEL (skjult) -->
+    <div class="container text-center mt-5">
+      <h1 class="headline">OVER 8 000 000 000 MISFORNØYDE KUNDER!</h1>
+    </div>
+
+    <!-- HVEM ER VI -->
+
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2>HVEM ER VI?</h2>
+
+          <p>
+            Her kommer informasjon om bedriften. Forklar hvem dere er og hva
+            dere tilbyr.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <div class="placeholder-box small-box">BILDE AV EIER</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HVA TILBYR VI -->
+
+    <div class="container mt-5 mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <div class="placeholder-box small-box">BILDE AV PRODUKT</div>
+        </div>
+
+        <div class="col-md-8">
+          <h2>HVA TILBYR VI?</h2>
+
+          <p>Her kommer informasjon om produktene.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR / LOGIN -->
+
     <aside id="authPanel" class="auth-panel" aria-hidden="true">
       <header
         class="p-3 border-bottom d-flex justify-content-between align-items-center"
       >
-        <strong>Min profil</strong>
-        <button id="authCloseBtn" class="btn btn-sm btn-outline-secondary">
+        <strong>Bruker</strong>
+
+        <button id="authCloseBtn" class="btn btn-sm btn-outline-dark">
           Lukk
         </button>
       </header>
@@ -61,11 +110,12 @@
       <div class="p-3">
         <div id="authLoggedOut">
           <div class="d-flex gap-2 mb-3">
-            <button class="btn btn-sm btn-outline-dark active" data-tab="login">
+            <button class="btn btn-outline-dark active" data-tab="login">
               Logg inn
             </button>
-            <button class="btn btn-sm btn-outline-dark" data-tab="signup">
-              Opprett profil
+
+            <button class="btn btn-outline-dark" data-tab="signup">
+              Registrer
             </button>
           </div>
 
@@ -75,19 +125,18 @@
               type="email"
               id="loginEmail"
               placeholder="E-post"
-              required
             />
+
             <input
               class="form-control mb-3"
               type="password"
               id="loginPass"
               placeholder="Passord"
-              required
             />
-            <button class="btn btn-dark w-100 mb-2" type="submit">
-              Logg inn
-            </button>
-            <div id="loginMsg" class="text-muted small"></div>
+
+            <button class="btn btn-dark w-100">Logg inn</button>
+
+            <div id="loginMsg" class="small mt-2"></div>
           </form>
 
           <form id="signupForm" data-panel="signup" style="display: none">
@@ -95,38 +144,41 @@
               class="form-control mb-2"
               type="text"
               id="signupName"
-              placeholder="Brukernavn (valgfritt)"
+              placeholder="Brukernavn"
             />
+
             <input
               class="form-control mb-2"
               type="text"
               id="signupClass"
-              placeholder="Klasse (f.eks. 1STA)"
+              placeholder="Klasse"
             />
+
             <input
               class="form-control mb-2"
               type="email"
               id="signupEmail"
               placeholder="E-post"
-              required
             />
+
             <input
               class="form-control mb-3"
               type="password"
               id="signupPass"
-              placeholder="Passord (min. 6 tegn)"
-              required
+              placeholder="Passord"
             />
-            <button class="btn btn-dark w-100 mb-2" type="submit">
-              Opprett profil
-            </button>
-            <div id="signupMsg" class="text-muted small mt-2"></div>
+
+            <button class="btn btn-dark w-100">Opprett profil</button>
+
+            <div id="signupMsg" class="small mt-2"></div>
           </form>
         </div>
 
         <div id="authLoggedIn" style="display: none">
-          <p class="small text-muted mb-1" id="whoami"></p>
-          <div id="roleBadge" class="mb-2 small"></div>
+          <p id="whoami"></p>
+
+          <div id="roleBadge"></div>
+
           <button id="logoutBtn" class="btn btn-outline-dark w-100">
             Logg ut
           </button>
