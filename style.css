@@ -103,14 +103,37 @@ body {
   flex-wrap: wrap;
 }
 
-.box1 {
+.midbox {
   flex: 1 1 calc(33.333% - 1rem);
   max-width: calc(33.333% - 1rem);
   box-sizing: border-box;
 }
 
+.topcontainer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.toprow,
+.topcontrols {
+  display: flex;
+  align-items: center;
+}
+
+.bottomcontainer {
+  margin-top: 2rem;
+}
+
+.bottomrow {
+  gap: 1rem;
+}
+
+.bottombox {
+  border: 1px solid #c4c4c4;
+}
+
 @media (max-width: 768px) {
-  .box1 {
+  .midbox {
     flex: 1 1 100%;
     max-width: 100%;
   }
