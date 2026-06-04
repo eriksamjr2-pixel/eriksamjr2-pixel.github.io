@@ -87,3 +87,36 @@ body {
 .auth-panel.open {
   transform: translateX(0);
 }
+
+/* PRODUKT-RAD (forside) */
+.midcontainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.midrow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.box1 {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .box1 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .placeholder-box {
+    height: 180px;
+    font-size: 2rem;
+  }
+}
