@@ -3,45 +3,43 @@ body {
   color: #666;
 }
 
-/* NAVIGASJONSFELT */
+/* NAVBAR */
 
-.navigasjonsfelt {
+.custom-navbar {
   background-color: #d8d8d8;
   border-bottom: 1px solid #bcbcbc;
 }
 
-.navigasjonslenke {
+.custom-link {
   color: #666;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-.nettsidelogo {
+.logo-text {
   color: #666;
   letter-spacing: 4px;
   font-weight: bold;
 }
 
-.søkefelt {
+.search-box {
   width: 200px;
 }
 
-.sidepanelknapp {
+.menu-btn {
   font-size: 2rem;
   border: none;
 }
 
-.sidepanelknapp:hover {
+.menu-btn:hover {
   background: transparent;
 }
 
-/* PRODUKTBILDER */
+/* PLACEHOLDERS */
 
-.produktbilde {
+.placeholder-box {
   background-color: #d9d9d9;
   height: 250px;
-  width: min(100%, 440px);
-  margin: 0 auto 20px;
 
   display: flex;
   align-items: center;
@@ -49,22 +47,24 @@ body {
 
   font-size: 3rem;
   font-weight: bold;
+
+  margin-bottom: 20px;
 }
 
-.eierbilde {
+.small-box {
   height: 220px;
   font-size: 2rem;
 }
 
-/* OVERSKRIFT */
+/* HEADLINE */
 
-.hovedoverskrift {
+.headline {
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 3px;
 }
 
-/* SIDEPANEL */
+/* SIDEBAR */
 
 .auth-panel {
   position: fixed;

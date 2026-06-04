@@ -13,29 +13,29 @@
   </head>
 
   <body>
-    <!-- NAVIGASJONSFELT -->
+    <!-- TOPBAR -->
 
-    <nav class="navbar navbar-expand-lg navigasjonsfelt">
-      <div class="container-fluid topcontainer">
-        <div class="d-flex align-items-center gap-4 toprow">
-          <a class="nav-link navigasjonslenke" href="index.html">HJEM</a>
-          <a class="nav-link navigasjonslenke" href="kontakt.html">KONTAKT</a>
-          <a class="nav-link navigasjonslenke" href="butikk.html">PRODUKTER</a>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center gap-4">
+          <a class="nav-link custom-link" href="index.html">HJEM</a>
+          <a class="nav-link custom-link" href="kontakt.html">KONTAKT</a>
+          <a class="nav-link custom-link" href="butikk.html">PRODUKTER</a>
         </div>
 
-        <h2 class="nettsidelogo mb-0">LIVETSHARDESKOLE.NO</h2>
+        <h2 class="logo-text mb-0">LIVETSHARDESKOLE.NO</h2>
 
-        <div class="d-flex align-items-center gap-2 topcontrols">
-          <span class="navigasjonslenke">SØK</span>
+        <div class="d-flex align-items-center gap-2">
+          <span class="custom-link">SØK</span>
 
-          <input class="form-control søkefelt" type="text" />
+          <input class="form-control search-box" type="text" />
 
-          <button id="authOpenBtn" class="btn sidepanelknapp">☰</button>
+          <button id="authOpenBtn" class="btn menu-btn">☰</button>
         </div>
       </div>
     </nav>
 
-    <!-- FREMHEVEDE PRODUKTER -->
+    <!-- PRODUKTER PÅ FORSIDE -->
 
     <div class="container mt-5">
       <div class="row text-center">
@@ -53,17 +53,17 @@
       </div>
     </div>
 
-    <!-- HOVEDOVERSKRIFT -->
+    <!-- OVERSKRIFT -->
 
     <div class="container text-center mt-5">
-      <h1 class="hovedoverskrift">OVER 8 000 000 000 MISFORNØYDE KUNDER!</h1>
+      <h1 class="headline">OVER 8 000 000 000 MISFORNØYDE KUNDER!</h1>
     </div>
 
     <!-- HVEM ER VI -->
 
-    <div class="container mt-5 informasjonsseksjon">
-      <div class="row align-items-center informasjonsrad">
-        <div class="col-md-6">
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-md-8">
           <h2>HVEM ER VI?</h2>
 
           <p>
@@ -72,25 +72,21 @@
           </p>
         </div>
 
-        <div class="col-md-6">
-          <div class="produktbilde eierbilde informasjonsbilde">
-            BILDE AV EIER
-          </div>
+        <div class="col-md-4">
+          <div class="placeholder-box small-box">BILDE AV EIER</div>
         </div>
       </div>
     </div>
 
     <!-- HVA TILBYR VI -->
 
-    <div class="container mt-5 mb-5 informasjonsseksjon">
-      <div class="row align-items-center informasjonsrad">
-        <div class="col-md-6">
-          <div class="produktbilde eierbilde informasjonsbilde">
-            BILDE AV PRODUKT
-          </div>
+    <div class="container mt-5 mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <div class="placeholder-box small-box">BILDE AV PRODUKT</div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-8">
           <h2>HVA TILBYR VI?</h2>
 
           <p>Her kommer informasjon om produktene.</p>
@@ -98,7 +94,7 @@
       </div>
     </div>
 
-    <!-- SIDEPANEL / LOGIN -->
+    <!-- SIDEBAR / LOGIN -->
 
     <aside id="authPanel" class="auth-panel" aria-hidden="true">
       <header
