@@ -40,6 +40,8 @@ body {
 .produktbilde {
   background-color: #d9d9d9;
   height: 250px;
+  width: min(100%, 440px);
+  margin: 0 auto 20px;
 
   display: flex;
   align-items: center;
@@ -47,8 +49,6 @@ body {
 
   font-size: 3rem;
   font-weight: bold;
-
-  margin-bottom: 20px;
 }
 
 .eierbilde {
