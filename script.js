@@ -112,5 +112,28 @@ document.getElementById("logoutBtn").addEventListener("click", async () => {
   await supabase.auth.signOut();
 });
 
+async function hentProdukt() {
+  const { data, error } = await supabase
+    .from("produkter")
+    .select("*")
+    .limit(1)
+    .single();
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  document.getElementById("produktNavn").textContent = data.navn;
+
+  document.getElementById("produktPris").textContent = data.pris + " kr";
+
+  document.getElementById("produktBeskrivelse").textContent = data.beskrivelse;
+
+  document.getElementById("produktBilde").src = data.bilde_url;
+}
+
+hentProdukt();
+
 supabase.auth.onAuthStateChange(() => refreshAuthUI());
 refreshAuthUI();
